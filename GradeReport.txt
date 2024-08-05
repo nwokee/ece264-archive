@@ -1,0 +1,92 @@
+Grade 100
+
+📝 Test1
+
+
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c -DINTEGRATE_1 hw3.c -o hw3a.o
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c integrator.c
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c func1.c
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3a.o integrator.o func1.o -o hw3-func1-1
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c func2.c
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3a.o integrator.o func2.o -o hw3-func2-1	
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c func3.c
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3a.o integrator.o func3.o -o hw3-func3-1
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c func4.c
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3a.o integrator.o func4.o -o hw3-func4-1 -lm
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c func5.c
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3a.o integrator.o func5.o -o hw3-func5-1 -lm
+  mkdir -p outputs
+  echo "testing integrate1"
+  testing integrate1
+  echo "testing func1"
+  testing func1
+  ./hw3-func1-1 testcases/test-func1-1 > outputs/test-func1-1.out 
+  ./hw3-func1-1 testcases/test-func1-2 > outputs/test-func1-2.out
+  ./hw3-func1-1 testcases/test-func1-3 > outputs/test-func1-3.out
+  echo "testing func2"
+  testing func2
+  ./hw3-func2-1 testcases/test-func2-1 > outputs/test-func2-1.out
+  ./hw3-func2-1 testcases/test-func2-2 > outputs/test-func2-2.out
+  ./hw3-func2-1 testcases/test-func2-3 > outputs/test-func2-3.out
+  echo "testing func3"             
+  testing func3
+  ./hw3-func3-1 testcases/test-func3-1 > outputs/test-func3-1.out
+  ./hw3-func3-1 testcases/test-func3-2 > outputs/test-func3-2.out
+  ./hw3-func3-1 testcases/test-func3-3 > outputs/test-func3-3.out
+  echo "testing func4"             
+  testing func4
+  ./hw3-func4-1 testcases/test-func4-1 > outputs/test-func4-1.out
+  ./hw3-func4-1 testcases/test-func4-2 > outputs/test-func4-2.out
+  ./hw3-func4-1 testcases/test-func4-3 > outputs/test-func4-3.out
+  echo "testing func5"             
+  testing func5
+  ./hw3-func5-1 testcases/test-func5-1 > outputs/test-func5-1.out
+  ./hw3-func5-1 testcases/test-func5-2 > outputs/test-func5-2.out
+  ./hw3-func5-1 testcases/test-func5-3 > outputs/test-func5-3.out
+  
+✅ Test1
+
+📝 Test2
+
+
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -c -DINTEGRATE_1 -DINTEGRATE_2 hw3.c -o hw3b.o
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3b.o integrator.o func1.o -o hw3-func1-2
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3b.o integrator.o func2.o -o hw3-func2-2	
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3b.o integrator.o func3.o -o hw3-func3-2
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3b.o integrator.o func4.o -o hw3-func4-2 -lm
+  gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror hw3b.o integrator.o func5.o -o hw3-func5-2 -lm
+  mkdir -p outputs
+  echo "testing integrate2"
+  testing integrate2
+  echo "testing func1"
+  testing func1
+  ./hw3-func1-2 testcases/test-func1-1 > outputs/test-func1-1.out 
+  ./hw3-func1-2 testcases/test-func1-2 > outputs/test-func1-2.out
+  ./hw3-func1-2 testcases/test-func1-3 > outputs/test-func1-3.out
+  echo "testing func2"             
+  testing func2
+  ./hw3-func2-2 testcases/test-func2-1 > outputs/test-func2-1.out
+  ./hw3-func2-2 testcases/test-func2-2 > outputs/test-func2-2.out
+  ./hw3-func2-2 testcases/test-func2-3 > outputs/test-func2-3.out
+  echo "testing func3"             
+  testing func3
+  ./hw3-func3-2 testcases/test-func3-1 > outputs/test-func3-1.out
+  ./hw3-func3-2 testcases/test-func3-2 > outputs/test-func3-2.out
+  ./hw3-func3-2 testcases/test-func3-3 > outputs/test-func3-3.out
+  echo "testing func4"             
+  testing func4
+  ./hw3-func4-2 testcases/test-func4-1 > outputs/test-func4-1.out
+  ./hw3-func4-2 testcases/test-func4-2 > outputs/test-func4-2.out
+  ./hw3-func4-2 testcases/test-func4-3 > outputs/test-func4-3.out
+  echo "testing func5"             
+  testing func5
+  ./hw3-func5-2 testcases/test-func5-1 > outputs/test-func5-1.out
+  ./hw3-func5-2 testcases/test-func5-2 > outputs/test-func5-2.out
+  ./hw3-func5-2 testcases/test-func5-3 > outputs/test-func5-3.out
+  
+✅ Test2
+
+
+::***::
+
+All tests passed

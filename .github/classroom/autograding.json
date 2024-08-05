@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Test1",
+      "setup": "",
+      "run": "make hw3-test1",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": null
+    },
+    {
+      "name": "Test2",
+      "setup": "",
+      "run": "make hw3-test2",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": null
+    }
+  ]
+}
