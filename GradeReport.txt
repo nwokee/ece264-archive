@@ -1,0 +1,18 @@
+grade 100
+
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -DTEST_ELIMINATE -o eliminate main.c eliminate.c
+  ./eliminate 6 3 > output1             # run your program with n=6, k=3 and output to file output1
+  diff -w output1 testcases/expected1 # display the differences between the two files line-by-line
+  ./eliminate 4 6 > output2
+  diff -w output2 testcases/expected2
+  ./eliminate 25 7 > output3
+  diff -w output3 testcases/expected3
+  
+✅ Tests
+
+
+::***::
+
+All tests passed
+
+  
