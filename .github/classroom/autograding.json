@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Test",
+      "setup": "",
+      "run": "make testall",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": null
+    }
+  ]
+}

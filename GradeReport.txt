@@ -1,0 +1,8 @@
+Grade 100
+
+
+gcc -std=c99 -g -Wall -Wshadow --pedantic -Wvla -Werror -DTEST_INTEGRATE -DRUN_INTEGRATE hw4.c integrator-hw4.c func1.c func2.c func3.c func4.c func5.c -o hw4 -lm
+./hw4 testcases/test1 testcases/output1
+./hw4 testcases/test2 testcases/output2
+./hw4 testcases/test3 testcases/output3
+./hw4 testcases/test4 testcases/output4
